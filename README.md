@@ -25,7 +25,6 @@ The following 3) should be started from the command line
     ~/workspace/QuestionGeneration/pythonscripts$ python python_wordnet_server.py
     ```
     
-    
 To make the wikipedia topic extraction to work
 You need nodejs and related dependencies
 
@@ -80,29 +79,29 @@ will not load up the Stanford Parser, which takes
 a lot of time and memory.
 
 To start the parser socket server, execute
-runStanfordParserServer.sh
+[`runStanfordParserServer.sh`](./runStanfordParserServer.sh)
 
 You can change whether the Stanford Parser uses
-a lexicalized (englishFactored.ser.gz, the default) 
-or and unlexicalized grammar (englishPCFG.ser.gz).
+a lexicalized (`englishFactored.ser.gz`, the default) 
+or and unlexicalized grammar (`englishPCFG.ser.gz`).
 
 To change what port the socket server uses, modify
-the runStanfordParserServer.sh script and the file
-config/QuestionTransducer.properties.
+the `runStanfordParserServer.sh` script and the file
+[`config/QuestionTransducer.properties`](./config/QuestionTransducer.properties).
 
 To change which grammar the system will load if the socket server is not running,
 modify the parserGrammarFile property in 
-config/factual-statement-extractor.properties.
+[`config/factual-statement-extractor.properties`](./config/factual-statement-extractor.properties).
 
 There is also a supersense tagging server for deciding WH words 
-from high-level word senses (see below).  To run it, execute the script runSSTServer.sh.
+from high-level word senses (see below).  To run it, execute the script [`runSSTServer.sh`](./runSSTServer.sh).
 
 
 ## Running the program without the script:
 
-The main class for generating questions is `edu.cmu.ark.QuestionAsker.
+The main class for generating questions is `edu.cmu.ark.QuestionAsker`.
 You can create questions from a text given on STDIN by 
-calling this class's main method, as in the run.sh script.
+calling this class's main method, as in the `run.sh` script.
 There are several command-line arguments:
 
 `--debug`
